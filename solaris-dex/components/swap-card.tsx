@@ -69,7 +69,7 @@ export function SwapCard() {
                 value={fromAmount}
                 onChange={(e) => setFromAmount(e.target.value)}
               />
-              <Select value={fromToken.symbol} onValueChange={(value) => setFromToken(TOKENS[value])}>
+              <Select value={fromToken.symbol} onValueChange={(value: keyof typeof TOKENS) => setFromToken(TOKENS[value])}>
                 <SelectTrigger className="w-[160px]">
                   <SelectValue>
                     <div className="flex items-center">
@@ -103,7 +103,7 @@ export function SwapCard() {
             </div>
             <div className="flex space-x-2">
               <Input type="number" placeholder="0.00" className="flex-grow" value={toAmount} readOnly />
-              <Select value={toToken.symbol} onValueChange={(value) => setToToken(TOKENS[value])}>
+              <Select value={toToken.symbol} onValueChange={(value) => setToToken(TOKENS[value as keyof typeof TOKENS])}>
                 <SelectTrigger className="w-[160px]">
                   <SelectValue>
                     <div className="flex items-center">
@@ -154,7 +154,7 @@ export function SwapCard() {
         isOpen={isTransactionModalOpen}
         onClose={() => setIsTransactionModalOpen(false)}
         amount={toAmount}
-        token={toToken.symbol}
+        token={toToken.symbol as keyof typeof TOKENS}
         txHash={txHash}
       />
     </Card>

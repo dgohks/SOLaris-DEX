@@ -32,7 +32,7 @@ export const TOKENS = {
 }
 
 // Mock exchange rates for demo
-export const MOCK_RATES = {
+export const MOCK_RATES: { [key:string]: number} = {
   'SOL/SOL': 1,
   'USDC/USDC': 1,
   'RAY/RAY': 1,
