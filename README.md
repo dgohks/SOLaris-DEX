@@ -3,4 +3,4 @@ SOLaris DEX is a dApp Token Swapping website, powered by Solana network, offerin
 
 Vercel Website: [https://solaris-dex.vercel.app/](https://solaris-dex.vercel.app/)
 <br>
-Demo Video:
+Demo Video: [https://youtu.be/822BrHlhOZU](https://youtu.be/822BrHlhOZU)
